@@ -2,13 +2,15 @@
 
 class Controller {
 
-    function __construct()
+    public function __construct()
     {
 
     }
 
-    function hello()
+    public function render($view)
     {
-        echo "hello";
+        $view_file = $view . '.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/app/views/' . $view_file;
     }
+
 }

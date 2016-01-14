@@ -1,4 +1,3 @@
 <?php
 
-
-require(__DIR__ . '/system/core.php');
+require __DIR__ . '/system/core.php';
