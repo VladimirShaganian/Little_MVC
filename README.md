@@ -1,2 +1,2 @@
-# Little_MVC
-My little MVC Framefork
+# Little_MVC Framework
+My little MVC Framework
