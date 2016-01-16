@@ -1,6 +1,6 @@
 <?php
 
-class App
+class Route
 {
     public function init() {
 
@@ -14,7 +14,6 @@ class App
         if (!empty($uri_segment[1]))
         {
             $controller = $uri_segment[1];
-
         }
 
         if (!empty($uri_segment[2]))
@@ -22,16 +21,10 @@ class App
             $method = $uri_segment[2];
         }
 
-        if (!empty($uri_segment[3]))
-        {
-            $property = $uri_segment[3];
-        }
-
-
         $controller_file = $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/' . ucfirst($controller) . 'Controller.php';
 
         if (file_exists($controller_file)) {
-            include $controller_file;
+            require_once $controller_file;
         } else {
             $this->ErrorPage404();
         }
@@ -41,9 +34,6 @@ class App
         if (method_exists($controller, $method)) {
             $controller->$method();
         }
-
-
-
     }
 
     function ErrorPage404()

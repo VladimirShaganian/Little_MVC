@@ -1,1 +1,2 @@
-<h1>Hello from main view</h1>
+<h1><?php echo $data[0];?></h1>
+

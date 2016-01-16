@@ -1,10 +1,12 @@
 <?php
 
-require_once __DIR__ . '/controller.php';
-require_once __DIR__ . '/app.php';
+require_once 'controller.php';
+require_once 'model.php';
+require_once 'route.php';
 
-$app = new app;
+$app = new Route;
 $app->init();
+
 
 
 

@@ -1,3 +1,3 @@
 <?php
 
-require __DIR__ . '/system/core.php';
+require 'system/core.php';
