@@ -1,3 +1,3 @@
 <?php
 
-require 'system/core.php';
+require_once 'system/core.php';

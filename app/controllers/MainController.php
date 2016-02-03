@@ -8,7 +8,9 @@ class Main extends Controller
 
         $model = $this->model('my_model'); // подключение модели
 
-        $data = ["Little MVC Framework"];
+        $data[] = get_class($this) . 'Controller';
+
+
 
         $this->view('main', $data); // подключение views
 

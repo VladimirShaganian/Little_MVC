@@ -1,8 +1,8 @@
 <?php
 
-require_once 'controller.php';
-require_once 'model.php';
-require_once 'route.php';
+spl_autoload_register(function($classes) {
+    require_once $classes . '.php';
+});
 
 $app = new Route;
 $app->init();

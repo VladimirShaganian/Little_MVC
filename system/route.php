@@ -25,8 +25,6 @@ class Route
 
         if (file_exists($controller_file)) {
             require_once $controller_file;
-        } else {
-            $this->ErrorPage404();
         }
 
         $controller = new $controller;
@@ -34,13 +32,5 @@ class Route
         if (method_exists($controller, $method)) {
             $controller->$method();
         }
-    }
-
-    function ErrorPage404()
-    {
-        $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
-        header('HTTP/1.1 404 Not Found');
-        header("Status: 404 Not Found");
-        header('Location:'.$host.'404');
     }
 }
